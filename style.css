@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: hsl(217, 54%, 11%);
+}
+
+body {
+  margin: 8px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 8px;
+  max-width: 280px;
+}
+
+.card > * {
+  margin-top: 20px;
+}
+
+.image__container {
+  border-radius: 16px;
+  margin-top: 0;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  border-radius: 16px;
+}
+
+.hover {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.image__container:hover .hover {
+  opacity: 1;
+  border-radius: 16px;
+  background-color: hsla(178, 100%, 50%, 0.5);
+}
+
+.card__title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.card__description {
+  color: hsl(215, 51%, 70%);
+  line-height: 20px;
+  font-size: 0.9rem;
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details__price {
+  display: flex;
+  align-items: center;
+}
+
+.details__time {
+  display: flex;
+  align-items: center;
+}
+
+.details__price :is(span) {
+  margin-left: 10px;
+  font-size: 0.9rem;
+  color: hsl(178, 100%, 50%);
+}
+
+.details__time :is(span) {
+  margin-left: 10px;
+  font-size: 0.9rem;
+  color: hsl(215, 51%, 70%);
+}
+
+.horizontal__row {
+  height: 1px;
+  border: 0.5px solid hsl(215, 32%, 27%);
+  width: 100%;
+}
+
+.author {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.author span {
+  color: hsl(215, 51%, 70%);
+}
+
+span .author__name {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.9rem;
+}
+
+.author__photo {
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
